@@ -1,27 +1,52 @@
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
 
 body {
     background: url("basketballbg1.jpg");
 }
 
-.container {
-    background-color: rgb(226, 143, 35);
-    height: 500px;
+#main-wrapper {
+    background-color: rgba(49, 47, 45, 0.918);
     margin-top: 50px;
+    position: relative;
 }
 
 #startBtn {
     padding: 10px 50px;
     font-size: 25px;
-    position: absolute;
-    top: 250px;
-    right: 500px;
+    margin: 25% auto;
 }
 
 h1 {
     font-size: 55px;
-    color: white;
+    color: orange;
 }
 
+#timer {
+    font-size: 35px;
+    color: rgba(115, 236, 45, 0.952);
+    font-weight: bolder;
+    margin: 3% auto;
+}
+
+#questionsDiv {
+    color: rgba(68, 231, 253, 0.945);
+    margin-top: 25px;
+}
+
+label {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.question {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#submitBtn {
+    margin: 1% auto;
+    padding: 5px 30px;
+
+}

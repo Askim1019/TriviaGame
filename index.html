@@ -11,22 +11,84 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container text-center">
+    <div class="container text-center" id="main-wrapper">
         <h1 class="text-center">NBA Trivia Game</h1>
 
-        <div id="timer">100 Seconds Left</div>
+        
 
         <button class="btn-primary" id="startBtn">Start</button>
+        
+        <div class="container text-center" id="questionsDiv">
+            <div id="timer">100 Seconds Left</div>
 
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+            <div class="row">
+                <div class="col-md-12 question">
+                    Which player scored the most points in one game?
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="radio" value="correct" name="choices1"/><label>Wilt Chamberlain</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices1"/><label>Michael Jordan</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices1"/><label>Lebron James</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices1"/><label>Julius Erving</label>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-12 question">
+                        Which player has the most career assists?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="radio" value="incorrect" name="choices2"/><label>Steve Nash</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" value="incorrect" name="choices2"/><label> Magic Johnson</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" value="incorrect" name="choices2"/><label>Lebron James</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" value="correct" name="choices2"/><label>John Stockton</label>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                        <div class="col-md-12 question">
+                            Which player has the highest career PPG?
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="radio" value="incorrect" name="choices3"/><label>Lebron James</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" value="correct" name="choices3"/><label> Michael Jordan</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" value="incorrect" name="choices3"/><label>Kobe Bryant</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" value="incorrect" name="choices3"/><label>Wilt Chamberlain</label>
+                        </div>
+                    </div>
+            <button class="btn-success" id="submitBtn">Submit</button>
+        </div>
+
+        
     </div>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
