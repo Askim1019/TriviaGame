@@ -1,0 +1,27 @@
+* {
+    outline: 1px solid red;
+}
+
+body {
+    background: url("basketballbg1.jpg");
+}
+
+.container {
+    background-color: rgb(226, 143, 35);
+    height: 500px;
+    margin-top: 50px;
+}
+
+#startBtn {
+    padding: 10px 50px;
+    font-size: 25px;
+    position: absolute;
+    top: 250px;
+    right: 500px;
+}
+
+h1 {
+    font-size: 55px;
+    color: white;
+}
+
