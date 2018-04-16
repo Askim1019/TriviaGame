@@ -1,77 +1,67 @@
-// Make a start button event to start the game and the timer
-
-// Make about 10 questions
-
-// Correct Answers
-
-// Incorrect Answers
-
-// Unanswered Answers
-
-// Add a done button at bottom when you finish early
-
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 var choice;
-var choiceArray = ['choices1', 'choices2', 'choice3','choices4']; 
+var choiceArray = ['choices1', 'choices2', 'choices3','choices4','choices5']; 
+var count = 35;
+var audio;
+
+function startTimer() {
+    var countdown = setInterval(function(){
+        $("#timer").text(count + " SECONDS LEFT!");
+
+        if (count === 0) {
+            clearInterval(count);
+            getAnswers();
+            goToResults();
+        }
+
+        count--;
+    }, 1000);
+}
 
 function startGame() {
     $("#startBtn").click(function(){
         $("#startBtn").hide();
         $("#questionsDiv").show();
+ 
+        startTimer();
     });
 }
 
-function startTimer() {
-    setTimeout(function(){
-
-    }, 60000);
+function restartGame() {
+    $('#restartBtn').click(function(){
+        location.reload();
+    });
 }
 
 function goToResults() {
     $("#questionsDiv").hide();
+    $("#correctResults").text("Correct Answers: " + correctAnswers);
+    $("#incorrectResults").text("Incorrect Answers: " + incorrectAnswers);
+    $("#unanswered").text("Unanswered: " + unanswered);
     $("#resultsDiv").show();
 }
 
+function getAnswers() {
+    for (var i = 0; i < choiceArray.length; i++) {
+        choice = $('input[name=' + choiceArray[i] + ']:checked').val();
+        
+        if (choice === 'correct') {
+            correctAnswers++;
+        } else if (choice === 'incorrect') {
+            incorrectAnswers++;
+        } else {
+            unanswered++;
+        }
+    }
+}
 function submitAnswers() {
     $("#submitBtn").click(function(){
-        for (var i = 0; i < choiceArray.length; i++) {
-            choice = $('input[name=' + choiceArray[i] + ']:checked').val();
-            
-            if (choice === 'correct') {
-                correctAnswers++;
-                console.log('correct answers ' + correctAnswers);
-            } else if (choice === 'incorrect') {
-                incorrectAnswers++;
-                console.log('incorrect answers ' + incorrectAnswers);
-            } else {
-                unanswered++;
-                console.log('unanswered ' + unanswered);
-            }
-        }
-
+       getAnswers();
        goToResults();
     });
 }
-/* 
-function checkCorrect(){
-    $("#submitBtn").click(function(){
-        firstChoice = $('input[name=choices1]:checked').val();
-        console.log(firstChoice);
-        
-        if (firstChoice === 'correct') {
-            correctAnswers++;
-            console.log(correctAnswers);
-        } else if (firstChoice === 'incorrect') {
-            incorrectAnswers++;
-            console.log(incorrectAnswers);
-        } else {
-            unanswered++;
-            console.log(unanswered);
-        }
-    });
-} */
 
 $(document).ready(function(){
     $("#questionsDiv").hide();
@@ -79,4 +69,6 @@ $(document).ready(function(){
 
     startGame();
     submitAnswers();
+
+    restartGame();
 });

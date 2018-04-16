@@ -56,3 +56,13 @@ label {
     margin: 2% auto;
     padding: 5px 40px;
 }
+
+.results {
+    font-size: 35px;
+    font-weight: bolder;
+    color: white;
+}
+
+.jumbotron {
+    background-color: rgba(231, 99, 22, 0.767);
+}
