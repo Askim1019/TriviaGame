@@ -19,7 +19,7 @@
         <button class="btn-primary" id="startBtn">Start</button>
         
         <div class="container text-center" id="questionsDiv">
-            <div id="timer">100 Seconds Left</div>
+            <div id="timer"></div>
 
             <div class="row">
                 <div class="col-md-12 question">
@@ -42,49 +42,81 @@
             </div>
 
             <div class="row">
-                    <div class="col-md-12 question">
-                        Which player has the most career assists?
-                    </div>
+                <div class="col-md-12 question">
+                    Which player has the most career assists?
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <input type="radio" value="incorrect" name="choices2"/><label>Steve Nash</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="radio" value="incorrect" name="choices2"/><label> Magic Johnson</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="radio" value="incorrect" name="choices2"/><label>Lebron James</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="radio" value="correct" name="choices2"/><label>John Stockton</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices2"/><label>Steve Nash</label>
                 </div>
-                
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices2"/><label> Magic Johnson</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices2"/><label>Lebron James</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="correct" name="choices2"/><label>John Stockton</label>
+                </div>
+            </div>
+            
 
-                <div class="row">
-                        <div class="col-md-12 question">
-                            Which player has the highest career PPG?
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <input type="radio" value="incorrect" name="choices3"/><label>Lebron James</label>
-                        </div>
-                        <div class="col-md-3">
-                            <input type="radio" value="correct" name="choices3"/><label> Michael Jordan</label>
-                        </div>
-                        <div class="col-md-3">
-                            <input type="radio" value="incorrect" name="choices3"/><label>Kobe Bryant</label>
-                        </div>
-                        <div class="col-md-3">
-                            <input type="radio" value="incorrect" name="choices3"/><label>Wilt Chamberlain</label>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12 question">
+                    Which player has the highest career PPG?
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices3"/><label>Lebron James</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="correct" name="choices3"/><label> Michael Jordan</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices3"/><label>Kobe Bryant</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices3"/><label>Wilt Chamberlain</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 question">
+                    Which coach has the most championship titles as a coach?
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices4"/><label>Gregg Popovich</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices4"/><label>Byron Scott</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="correct" name="choices4"/><label>Phil Jackson</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" value="incorrect" name="choices4"/><label>Brad Stevens</label>
+                </div>
+            </div>
+
+
+
             <button class="btn-success" id="submitBtn">Submit</button>
         </div>
 
-        
+        <div class="container text-center" id="resultsDiv">
+            <div class="jumbotron">
+                <h1>Your Results!</h1>
+                <div class="results" id="correctResults"></div>
+                <div class="results" id="incorrectResults"></div>
+                <div class="results" id="unanswered"></div>
+
+                <button type="button" id="restartBtn" class="btn-primary">Restart</button>
+            </div>
+        </div>
     </div>
 
 

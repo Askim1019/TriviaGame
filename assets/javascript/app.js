@@ -14,7 +14,7 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 var choice;
-var choiceArray = ['choices1', 'choices2', 'choice3'] 
+var choiceArray = ['choices1', 'choices2', 'choice3','choices4']; 
 
 function startGame() {
     $("#startBtn").click(function(){
@@ -23,6 +23,16 @@ function startGame() {
     });
 }
 
+function startTimer() {
+    setTimeout(function(){
+
+    }, 60000);
+}
+
+function goToResults() {
+    $("#questionsDiv").hide();
+    $("#resultsDiv").show();
+}
 
 function submitAnswers() {
     $("#submitBtn").click(function(){
@@ -31,15 +41,17 @@ function submitAnswers() {
             
             if (choice === 'correct') {
                 correctAnswers++;
-                console.log(correctAnswers);
+                console.log('correct answers ' + correctAnswers);
             } else if (choice === 'incorrect') {
                 incorrectAnswers++;
-                console.log(incorrectAnswers);
+                console.log('incorrect answers ' + incorrectAnswers);
             } else {
                 unanswered++;
-                console.log(unanswered);
+                console.log('unanswered ' + unanswered);
             }
         }
+
+       goToResults();
     });
 }
 /* 
@@ -63,6 +75,7 @@ function checkCorrect(){
 
 $(document).ready(function(){
     $("#questionsDiv").hide();
+    $("#resultsDiv").hide();
 
     startGame();
     submitAnswers();
